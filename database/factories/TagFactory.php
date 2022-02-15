@@ -2,6 +2,7 @@
 
 namespace Database\Factories\Dealskoo\Tag\Models;
 
+use Dealskoo\Country\Models\Country;
 use Dealskoo\Tag\Models\Tag;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -22,7 +23,9 @@ class TagFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'slug' => $this->faker->unique()->slug(),
+            'name' => $this->faker->name,
+            'country_id' => Country::factory()->create(),
         ];
     }
 }
