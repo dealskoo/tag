@@ -6,10 +6,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Dealskoo\Country\Traits\HasCountry;
+use Dealskoo\Admin\Traits\HasSlug;
 
 class Tag extends Model
 {
-    use HasFactory, SoftDeletes, HasCountry;
+    use HasFactory, SoftDeletes, HasCountry, HasSlug;
 
     protected $fillable = [
         'slug',

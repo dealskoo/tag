@@ -6,6 +6,7 @@ use Dealskoo\Tag\Models\Tag;
 use Dealskoo\Tag\Tests\Post;
 use Dealskoo\Tag\Tests\Product;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Str;
 use Dealskoo\Tag\Tests\TestCase;
 
 class TagTest extends TestCase
@@ -44,5 +45,14 @@ class TagTest extends TestCase
 
         $posts = $tag->withType(Post::class)->get();
         $this->assertCount(1, $posts);
+    }
+
+    public function test_slug()
+    {
+        $slug = 'Hello';
+        $tag = Tag::factory()->create();
+        $tag->slug = $slug;
+        $tag->save();
+        $this->assertEquals($tag->slug, Str::lower($slug));
     }
 }
