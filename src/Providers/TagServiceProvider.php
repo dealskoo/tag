@@ -5,6 +5,7 @@ namespace Dealskoo\Tag\Providers;
 use Dealskoo\Admin\Facades\AdminMenu;
 use Dealskoo\Admin\Facades\PermissionManager;
 use Dealskoo\Admin\Permission;
+use Dealskoo\Tag\TagManager;
 use Illuminate\Support\ServiceProvider;
 
 class TagServiceProvider extends ServiceProvider
@@ -16,7 +17,7 @@ class TagServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->singleton('tag_manager', TagManager::class);
     }
 
     /**

@@ -2,6 +2,7 @@
 
 namespace Dealskoo\Tag\Tests;
 
+use Dealskoo\Tag\Facades\TagManager;
 use Dealskoo\Tag\Providers\TagServiceProvider;
 
 abstract class TestCase extends \Dealskoo\Admin\Tests\TestCase
@@ -15,7 +16,9 @@ abstract class TestCase extends \Dealskoo\Admin\Tests\TestCase
 
     protected function getPackageAliases($app)
     {
-        return [];
+        return [
+            'TagManager' => TagManager::class
+        ];
     }
 
     protected function setUp(): void

@@ -55,6 +55,7 @@
                 "Dealskoo\\Tag\\Providers\\TagServiceProvider"
             ],
             "aliases": {
+                "TagManager": "Dealskoo\\Tag\\Facades\\TagManager"
             }
         }
     },
