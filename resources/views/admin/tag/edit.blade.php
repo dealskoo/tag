@@ -47,7 +47,7 @@
                             <div class="col-md-12 mb-3">
                                 <label for="slug" class="form-label">{{ __('tag::tag.slug') }}</label>
                                 <input type="text" class="form-control" id="slug" name="slug" required
-                                       value="{{ old('slug',$tag->slug) }}" tabindex="2" readonly
+                                       value="{{ old('slug',$tag->slug) }}" tabindex="2"
                                        placeholder="{{ __('tag::tag.slug_placeholder') }}">
                             </div>
                             <div class="col-md-12 mb-3">
