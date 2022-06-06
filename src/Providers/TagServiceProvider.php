@@ -45,7 +45,7 @@ class TagServiceProvider extends ServiceProvider
             $menu->route('admin.tags.index', 'tag::tag.tags', [], ['permission' => 'tags.index']);
         });
 
-        PermissionManager::add(new Permission('tags.index', 'Tag Lists'));
+        PermissionManager::add(new Permission('tags.index', 'Tag List'));
         PermissionManager::add(new Permission('tags.show', 'View Tag'), 'tags.index');
         PermissionManager::add(new Permission('tags.create', 'Create Tag'), 'tags.index');
         PermissionManager::add(new Permission('tags.edit', 'Edit Tag'), 'tags.index');
