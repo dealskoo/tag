@@ -25,7 +25,7 @@ class TagFactory extends Factory
         return [
             'slug' => $this->faker->unique()->slug(),
             'name' => $this->faker->name,
-            'country_id' => Country::factory()->create(),
+            'country_id' => Country::factory(),
         ];
     }
 }
